@@ -1,2 +1,2 @@
-# Miko_Store
+# Mikochi
 MikoStore_Web
