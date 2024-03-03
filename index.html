@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+<style>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #ff6600;
+  color: rgb(0, 0, 0);
+  width: 98vw;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+}
+
+.navbar li {
+  margin: 0 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  color: black;
+  transition: color 0.3s ease;
+  line-height: normal;
+  height: 60px;
+  width: 170px;
+}
+
+.navbar a:hover {
+  color: #484747;
+}
+
+.logo img {
+  width: 170px;
+  height: 50px;
+  margin-left: 15px;
+}
+  body {
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+}
+
+.slides{
+  width: 100vw;
+  position: relative;
+}
+
+.slides .slide{
+  display: none;
+}
+
+.slides .slide img{
+  width: 100%;
+  animation-name: fade;
+  animation-duration: 1,5s;
+  height: 700px;
+}
+
+.slides .navigation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  justify-content: space-between;
+  width: 98vw;
+}
+
+.slides .navigation .prev, .slides .navigation .next{
+  cursor: pointer;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: rgba(0,0,0.2);
+  user-select: none;
+  transition: 0,6s ease;
+}
+
+.slides .navigation .prev :hover, .slides .navigation .next :hover{
+background: rgba(0,0,0,0.1);
+}
+
+@keyframes fade{
+from{opacity: 0.3}
+to{opacity: 1}
+}
+
+@media (max-width: 992px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 18px;
+    padding: 13px;
+  }
+}
+
+@media (max-width: 768px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 360px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+  
+  div.colum {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    position: relative;
+  }
+  h2{
+  text-align: center;
+  font-family: katibeh;
+}
+h1.rec{
+  text-align: left;
+  font-family: katibeh;
+  top: 60px;
+}
+h4.center{
+  text-align: center;
+}
+
+.box1{
+  width:300px;
+  height:430px;
+  background:#ABC2C1;
+  border-radius: 10px;
+  text-align: center;
+  margin-left : 39px;
+}
+.box1 img{
+border-radius: 10px;
+}
+b{
+  font-size: large;
+  margin: 20px;
+}
+.two {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+
+.flex-container {
+  display: flex;
+  background-color: #ABC2C1;
+  border-radius: 25px;
+  position: relative;
+  top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-container > div {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  padding: 13px;
+  }
+
+figcaption{
+  text-align:center;
+}
+
+div.container{
+  position: relative;
+  top: 85px;
+}
+.formbox h1{
+  color: #000000;
+  font-weight: 700;
+  font-size: xx-large;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.formbox{
+  top: 178px;
+  position: relative;
+  width: 100vw;
+  background-image: url("foto/assia.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.formbox .row50{
+  gap:50px;
+  border-radius: 20px;
+}
+
+.inputbox{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.formbox .row100 .inputbox {
+  width: 75%;
+}
+
+.inputbox span{
+  color:#010101;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 5000;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.inputbox input{
+  padding : 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid#333;
+  margin-bottom: 5px;
+}
+
+.inputbox textarea{
+  padding : 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid#333;
+  resize: none;
+  min-height: 220px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.inputbox input[type="submit"]{
+  background: #ff6600;
+  color: #000;
+  font-size: 1.1em;
+  max-width: 120px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 14px 15px;
+  margin-bottom: 40px;
+  left: 50%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+  padding: 10px;
+  border: 1px dashed grey;
+}
+.footer {
+  padding: 3px;
+  background-color: #ff6600;
+  color: rgb(0, 0, 0);
+  width: 100vw;
+  position: relative;
+  top: 150px;
+  width : 1350;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icons a {
+  text-decoration: none;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.icons img {
+  width: 40px;
+  height: 40px;
+  bottom: 40px;
+}
+
+.p {
+  font-size: 15px;
+  color: #000000;
+  text-align: left;
+}
+</style>
+<title>Asian Food</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="foto/logo.png" alt="logo" />
+    </div>
+    <ul>
+  <li class="nav=item"><a class="nav-link" href="#tentang-kami">Tentang Kami</a></li>
+  <li class="nav-item"><a class="nav-link" href="#recomendation">Rekomendasi Resep</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+</ul>
+  </nav>
+  <div class="slides">
+    <div class="slide">
+      <img src="foto/asiaaa.jpg" alt="Masakan Asia">
+    </div>
+    <div class="slide">
+      <img src="foto/asian.jpg" alt="Masakan Asia" >
+    </div>
+    <div class="slide">
+      <img src="foto/asia.jpg" alt="Masakan Asia" >
+    </div>
+    <div class="navigation">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(-1)">&#10095;</a>
+    </div>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      if (n > slides.length)
+      {
+        slideIndex = 1
+      }
+      if (n < 1)
+      {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++)
+      {
+          slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+  </script>
+<!-- Tentang Kami-->
+<section class="page-section" id="tentang-kami">
+  <div class="colum"><br><h2>Tentang Kami</h2><h4 class="center">Pembuatan website ini bertujuan untuk mempermudah<br>orang - orang untuk mencari resep dari<br> masakan yang ingin dibuat dan juga menampilkan<br> beberapa ide masakan kreatif</h4><br><h2>Keunggulan</h2><h4 class="center">-Menyediakan resep - resep masakan dari<br> seluruh negara asia<br>
+    -Dilengkapi Tutorial Youtube
+    </h4></div>
+</section>
+
+<!-- Rekomendasi Resep-->
+<h1  id="recomendation">Rekomendasi Rerep Hari Ini</h1>
+<div class="two">
+  <div class="box1"><a href="coding2.html"><img src="foto/2.jpg" height="250" width="299"></a>
+    <b>Pancake </b>
+    <br>
+    Panekuk atau kue dadar adalah kue yang dibuat dari terigu, telur ayam, gula dan susu.<br> Bahan-bahan dicampur dengan air<br>membentuk adonan kental yang digoreng di atas wajan datar yang diolesi sedikit minyak. </div>
+    <div class="box1"><a href="gulai2.html"><img src="foto/7.jpg" height="250" width="299"></a>
+      <b>Gulai Sapi </b>
+      <br>
+      Gulai adalah Masakan Indonesia berbahan baku daging sapi, yang diolah dalam kuah bumbu rempah yang bercita rasa gurih yang berasal dari Sumatera, Indonesia.</div>
+      <div class="box1"><a href="urap2.html"><img src="foto/3.jpeg" height="250" width="299"></a>
+        <b>Urap-Urap</b>
+          <br>
+        Urap-urap adalah hidangan salad tradisional. Sayur yang dimasak (direbus) dicampur dengan bumbu kelapa parut yang memiliki citarasa yang khas. </div>
+</div>
+<br>
+<br>
+<h1 class="rec">Rekomendasi Untuk Semua Orang</h1>
+<div class="flex-container">
+  <div class="img"><img src="foto/in.jpg" alt="Indonesia" height="250" width="350"><figcaption>Masakan Indonesia</figcaption></div>
+  <div class="img"><img src="foto/cn.jpg" alt="Cina" height="250" width="350" ><figcaption>Masakan Cina</figcaption></div>
+  <div class="img"><img src="foto/kr.jpg" alt="Korea" height="250" width="350" ><figcaption>Masakan Korea</figcaption></div>
+  <div class="img"><img src="foto/jp.jpg" alt="Jepang" height="250" width="350" ><figcaption>Masakan Jepang</figcaption></div>
+  <div class="img"><img src="foto/india.jpg" alt="India" height="250" width="350" ><figcaption>Masakan India</figcaption></div>
+  <div class="img"><img src="foto/sing.jpg" alt="Singapura" height="250" width="350" ><figcaption>Masakan Singapura</figcaption></div>
+</div>
+
+<!-- Contact Us-->
+<div class="contact form">
+  <form>
+  <div class="formbox">
+    <h1 id="contact">Contact Us</h1>
+    <div class="row50">
+      <div class="inputbox">
+        <span>Username</span>
+        <input type="text" placeholder="Masukkan Username">
+      </div>
+      <div class="inputbox">
+      <span>Email</span>
+      <input type="email" placeholder="Masukkan Email">
+      </div>
+      <div class="row100">
+        <div class="inputbox">
+          <span>Komentar</span>
+          <textarea placeholder="Tuliskan Pesan Anda Disini"></textarea>
+        </div>
+        <div class="row100">
+          <div class="inputbox">
+            <input type="submit" value="Kirim">
+          </div>
+    </div>
+    </div>
+  </div>
+  </form>
+</div>
+<footer class="footer">
+  <div class="icons">
+    <a href="https://m.facebook.com/profile.php/?id=100052171489238"><img src="foto/fb.png" alt="Facebook" /></a>
+    <a href="https://www.instagram.com/anindyafirza/"><img src="foto/ig.png" alt="Instagram"/></a>
+    <img src="foto/em.png" alt="Email"/></a>
+  </div>
+  <p class="p">Copyright © AsianFood Inc.</p>
+</footer>
+</body>
+</html>
+
+
